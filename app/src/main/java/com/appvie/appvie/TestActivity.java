@@ -1,5 +1,6 @@
 package com.appvie.appvie;
 
+import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,10 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.appvie.appvie.model.Cliente;
 import com.appvie.appvie.model.OrderStatus;
@@ -73,16 +78,16 @@ public class TestActivity extends AppCompatActivity {
     }
 
     private void setDataListItems(){
-        mDataList.add(new TimeLineModel("Alta","Item successfully delivered", "", OrderStatus.INACTIVE));
-        mDataList.add(new TimeLineModel("Proxima Visita","Item successfully delivered", "", OrderStatus.INACTIVE));
-        mDataList.add(new TimeLineModel("Receita","Co", "2017-02-12   08:00", OrderStatus.ACTIVE));
-        mDataList.add(new TimeLineModel("Pedido de Exame", "Item has reacheurier is out to delivery your orderd courier facility at New Delhi", "2017-02-11   21:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Consulta","Item has been given to the courier", "2017-02-11   18:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Encaminhamento","Item is packed and will dispatch soon", "2017-02-11   09:30", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Internação","Order is being readied for dispatch", "2017-02-11   08:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Receita","asdasd", "2017-02-10   15:00", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Pedido de Exame","asdasd", "2017-02-10   14:30", OrderStatus.COMPLETED));
-        mDataList.add(new TimeLineModel("Consulta","asdasd", "2017-02-10   14:00", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Alta","Melhora do quadro de infecção. Paciente recebe alta.", "","Pedro Carvalho", "12323", OrderStatus.INACTIVE));
+        mDataList.add(new TimeLineModel("Proxima Visita","Próxima visita agendada para 30 dias", "", "Pedro Carvalho", "12323", OrderStatus.INACTIVE));
+        mDataList.add(new TimeLineModel("Receita","antibiótico", "2017-02-12   08:00","Pedro Carvalho", "12323", OrderStatus.ACTIVE));
+        mDataList.add(new TimeLineModel("Pedido de Exame", "Exame de sangue e urina ", "2017-02-11   21:00","Pedro Carvalho", "12323", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Consulta","Consulta com um urologista, para nova avaliação do quadro de infecção.", "2017-02-11   18:00","Pedro Carvalho", "12323", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Encaminhamento","Tratamento com um urologista  ", "2017-02-11   09:30","Arthur Diniz", "39421", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Internação","Não melhora do quadro de infecção. Tratamento intensivo durante 48hrs ", "2017-02-11   08:00","Arthur Diniz", "39421", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Receita","Antibiótico e analgésico ", "2017-02-10   15:00","Arthur Diniz", "39421", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Pedido de Exame","Exame de sangue e urina ", "2017-02-10   14:30","Arthur Diniz", "39421", OrderStatus.COMPLETED));
+        mDataList.add(new TimeLineModel("Consulta","Consulta com um clínico geral. Paciente queixando de dor abdominal com dificuldade de urinar ", "2017-02-10   14:00","Arthur Diniz", "39421", OrderStatus.COMPLETED));
 
 
     }
@@ -97,7 +102,27 @@ public class TestActivity extends AppCompatActivity {
                 return true;
 
             case R.id.done:
+                // custom dialog
+                final Dialog dialog = new Dialog(TestActivity.this);
+                dialog.setContentView(R.layout.dialog_add_timeline);
+                dialog.setTitle("Title...");
 
+                // set the custom dialog components - text, image and button
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText("Android custom dialog example!");
+                ImageView image = (ImageView) dialog.findViewById(R.id.image);
+                image.setImageResource(R.drawable.ic_add_black_24dp);
+
+                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                // if button is clicked, close the custom dialog
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
                 return true;
 
 

@@ -79,8 +79,9 @@ public class TimeLineAdapter extends RecyclerView.Adapter<TimeLineViewHolder> {
 
         holder.mMessage.setText(timeLineModel.getMessage());
         holder.mType.setText(timeLineModel.getType());
-        holder.mMedicName.setText("Dr. Arthur Diniz");
-        holder.mMedicCrm.setText("CRM: 13519 DF");
+
+        holder.mMedicName.setText("Dr." + timeLineModel.getmMedicName());
+        holder.mMedicCrm.setText("CRM: " + timeLineModel.getmMedicCrm());
     }
 
     @Override

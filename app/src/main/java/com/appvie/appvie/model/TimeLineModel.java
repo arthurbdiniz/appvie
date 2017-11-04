@@ -12,17 +12,29 @@ public class TimeLineModel implements Parcelable {
 
     private String mMessage;
     private String mDate;
+    private String mMedicName;
+    private String mMedicCrm;
     private OrderStatus mStatus;
+
+    public String getmMedicName() {
+        return mMedicName;
+    }
+
+    public String getmMedicCrm() {
+        return mMedicCrm;
+    }
 
     public TimeLineModel() {
     }
 
 
 
-    public TimeLineModel(String mType, String mMessage, String mDate, OrderStatus mStatus) {
+    public TimeLineModel(String mType, String mMessage, String mDate, String mMedicName, String mMedicCrm, OrderStatus mStatus) {
         this.mType = mType;
         this.mMessage = mMessage;
         this.mDate = mDate;
+        this.mMedicName = mMedicName;
+        this.mMedicCrm = mMedicCrm;
 
         this.mStatus = mStatus;
     }

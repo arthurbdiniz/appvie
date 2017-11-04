@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity
 
                 }
 
-                adapter = new ClientAdapter(userClients ,getApplicationContext(), recyclerView);
+                adapter = new ClientAdapter(userClients ,MainActivity.this, recyclerView);
 
                 recyclerView.setAdapter(adapter);
                 RecyclerView.LayoutManager layout = new LinearLayoutManager(getApplicationContext(),
