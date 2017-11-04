@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "2083481350",
+    "firebase_url": "https://appvie-e179e.firebaseio.com",
+    "project_id": "appvie-e179e",
+    "storage_bucket": "appvie-e179e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2083481350:android:4e596f6876744ca8",
+        "android_client_info": {
+          "package_name": "com.appvie.appvie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2083481350-rmugbqgek99shh4iduf562mc9n6tiuhr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appvie.appvie",
+            "certificate_hash": "01fccbb1c774765ea59db99204e0f00cc0c1fd57"
+          }
+        },
+        {
+          "client_id": "2083481350-dul4elt5lra9qptath5k6cjgmvttmk1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0tHf9AnMQY1JRxCwfG9sCkQ8XgJYiJ8Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2083481350-dul4elt5lra9qptath5k6cjgmvttmk1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
