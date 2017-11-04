@@ -108,10 +108,10 @@ public class TestActivity extends AppCompatActivity {
                 dialog.setTitle("Title...");
 
                 // set the custom dialog components - text, image and button
-                TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Android custom dialog example!");
-                ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.ic_add_black_24dp);
+//                TextView text = (TextView) dialog.findViewById(R.id.text);
+//                text.setText("Android custom dialog example!");
+//                ImageView image = (ImageView) dialog.findViewById(R.id.image);
+//                image.setImageResource(R.drawable.ic_add_black_24dp);
 
                 Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
                 // if button is clicked, close the custom dialog

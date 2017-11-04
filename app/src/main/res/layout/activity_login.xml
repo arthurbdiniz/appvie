@@ -6,22 +6,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.appvie.appvie.LoginActivity">
 
-
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:background="#48BC97"
             android:orientation="vertical">
 
-
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/appvie_branco_1"/>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="250dp">
+                android:layout_marginTop="30dp">
 
                 <EditText
                     android:paddingLeft="10dp"
